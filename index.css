@@ -1,3 +1,44 @@
 .search-form {
+}
+
+.search-result-item {
+  display: flex;
+  flex-direction: row-reverse;
   border: solid 2px salmon;
+  gap: 15px;
+}
+
+.search-result-item__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-result-item__description {
+  flex-grow: 1;
+}
+
+.search-result-item__title {
+  color: #333;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 1.3;
+}
+.search-result-item__precio {
+  color: #333;
+
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.search-result-item__img {
+  width: 160px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-result-item__img__img {
+  width: 160px;
+  height: auto;
 }

@@ -1,6 +1,7 @@
 import React from "react";
 import { SearchForm } from "./SearchForm";
 import { SearchResultItem } from "./SearchResultItem";
+import { log } from "console";
 
 class App extends React.Component<any, any> {
   constructor(props) {
@@ -20,7 +21,14 @@ class App extends React.Component<any, any> {
     return (
       <div>
         <SearchForm onSearch={handleSearch} />
-        <SearchResultItem />
+        {this.state.results.map((r) => (
+          <SearchResultItem
+            title={r.title}
+            price={r.price}
+            picture={r.thumbnail}
+            key={r.title + r.price}
+          />
+        ))}
       </div>
     );
   }
